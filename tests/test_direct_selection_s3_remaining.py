@@ -1,3 +1,4 @@
+import errno
 import json
 import urllib.error
 import urllib.request
@@ -139,5 +140,25 @@ def test_same_actor_different_run_and_same_run_different_request_are_isolated(tm
         )}
         assert operations == {f"conclusion.record:{actor_id}:{first_run}",
                               f"conclusion.record:{actor_id}:{second_run.run_id}"}
+    finally:
+        manager.close()
+
+
+def test_long_run_token_is_not_rejected_as_a_filename(tmp_path, monkeypatch):
+    manager = IssueManager.initialize(tmp_path / "long-run-token", context_rule="scoped-v2")
+    original_exists = Path.exists
+
+    def exists(path):
+        if path.name.startswith("run1.") or path.name == "ordinary-long-path":
+            raise OSError(errno.ENAMETOOLONG, "synthetic name too long")
+        return original_exists(path)
+
+    try:
+        monkeypatch.setattr(Path, "exists", exists)
+        token = "run1." + "x" * 300
+        assert manager.credentials._read(token) == (token, None)
+        with pytest.raises(OSError) as error:
+            manager.credentials._read("ordinary-long-path")
+        assert error.value.errno == errno.ENAMETOOLONG
     finally:
         manager.close()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import errno
 import hashlib
 import hmac
 import json
@@ -246,7 +247,15 @@ class CredentialResolver:
     def _read(self, credential: str | Path) -> tuple[str, str | None]:
         value = str(credential)
         candidate = Path(value)
-        if candidate.exists():
+        try:
+            is_file_candidate = candidate.exists()
+        except OSError as exc:
+            # Long run tokens can exceed a filesystem's per-component limit.
+            # Other path errors still fail rather than bypassing file validation.
+            if exc.errno != errno.ENAMETOOLONG or not value.startswith("run1."):
+                raise
+            is_file_candidate = False
+        if is_file_candidate:
             resolved = candidate.resolve()
             trusted_root = (self.store.ledger_dir / "credentials").resolve()
             try:
