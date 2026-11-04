@@ -1,0 +1,38 @@
+[
+  {
+    "kind": "issue_type",
+    "name": "material-sample",
+    "api_version": "issue-type/v2",
+    "definition": {
+      "allowed_children": ["characterization"],
+      "rollup_mode": "mixed",
+      "conclusion": {
+        "structured_outputs_schema": {"type": "object", "properties": {}, "additionalProperties": true},
+        "publication_profiles": {
+          "provisional": {"min_active_evidence": 0, "minimum_verification_level": "declared", "review_quorum": 0},
+          "accepted": {"min_active_evidence": 1, "minimum_verification_level": "source_verified", "review_quorum": 1},
+          "canonical": {"min_active_evidence": 1, "minimum_verification_level": "snapshot_verified", "review_quorum": 2}
+        },
+        "report_facing": false
+      }
+    }
+  },
+  {
+    "kind": "issue_type",
+    "name": "characterization",
+    "api_version": "issue-type/v2",
+    "definition": {
+      "allowed_children": [],
+      "rollup_mode": "semantic",
+      "conclusion": {
+        "structured_outputs_schema": {"type": "object", "properties": {}, "additionalProperties": true},
+        "publication_profiles": {
+          "provisional": {"min_active_evidence": 0, "minimum_verification_level": "declared", "review_quorum": 0},
+          "accepted": {"min_active_evidence": 1, "minimum_verification_level": "source_verified", "review_quorum": 1},
+          "canonical": {"min_active_evidence": 1, "minimum_verification_level": "snapshot_verified", "review_quorum": 2}
+        },
+        "report_facing": false
+      }
+    }
+  }
+]

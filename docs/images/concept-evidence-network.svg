@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 880" role="img" aria-labelledby="title desc">
+<title id="title">证据图与局部贡献：漫画构图草图</title>
+<desc id="desc">一块大证据板上有树状分支，绿色为可用证据，灰色为不可用证据；关键反驳关系旁有启用与关闭控制。右下角人物抱着带连接线的新证据。</desc>
+<defs>
+<filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#b96c55"/></marker>
+</defs>
+<rect width="1500" height="880" fill="#f8f5ed"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#344a42">
+<text x="50" y="53" font-size="28" font-weight="700">构图草图：一张持续生长的证据图</text>
+<text x="50" y="86" font-size="17" fill="#78867c">重点：分支网络占据画面；局部加节点与关系，后台更新相关状态</text>
+<!-- board -->
+<rect x="40" y="112" width="1420" height="655" rx="18" fill="#e9dcc4" stroke="#a88e70" stroke-width="5"/>
+<rect x="100" y="160" width="1300" height="546" rx="14" fill="#fffdf4" stroke="#907758" stroke-width="8"/>
+<rect x="565" y="124" width="370" height="68" rx="9" fill="#f0e3cb" stroke="#a88e70" stroke-width="4"/>
+<text x="750" y="169" font-size="25" text-anchor="middle" font-weight="700">EVIDENCE ARCHIVE</text>
+<!-- network paths, supporting branches -->
+<g fill="none" stroke-linecap="round" stroke-width="7">
+<path d="M750 235 L750 312 L910 377 L1010 457" stroke="#68ad8e"/>
+<path d="M750 312 L630 378 L570 457 L490 535" stroke="#aeb7b2" stroke-dasharray="10 7"/>
+<path d="M630 378 L670 465 L750 545" stroke="#aeb7b2" stroke-dasharray="10 7"/>
+<path d="M910 377 L850 464 L925 550" stroke="#68ad8e"/>
+<path d="M1010 457 L1120 521" stroke="#68ad8e"/>
+<path d="M850 464 L795 570" stroke="#68ad8e"/>
+</g>
+<!-- glowing active evidence nodes -->
+<g filter="url(#glow)" fill="#a4dfb5" opacity=".65">
+<circle cx="750" cy="235" r="23"/><circle cx="750" cy="312" r="23"/><circle cx="910" cy="377" r="23"/><circle cx="1010" cy="457" r="23"/><circle cx="1120" cy="521" r="23"/><circle cx="850" cy="464" r="23"/><circle cx="925" cy="550" r="23"/><circle cx="795" cy="570" r="23"/>
+</g>
+<g fill="#5bb386" stroke="#f8fff7" stroke-width="5">
+<circle cx="750" cy="235" r="22"/><circle cx="750" cy="312" r="22"/><circle cx="910" cy="377" r="22"/><circle cx="1010" cy="457" r="22"/><circle cx="1120" cy="521" r="22"/><circle cx="850" cy="464" r="22"/><circle cx="925" cy="550" r="22"/><circle cx="795" cy="570" r="22"/>
+</g>
+<g fill="#b8bfba" stroke="#f8f9f5" stroke-width="5">
+<circle cx="630" cy="378" r="22"/><circle cx="570" cy="457" r="22"/><circle cx="490" cy="535" r="22"/><circle cx="670" cy="465" r="22"/><circle cx="750" cy="545" r="22"/>
+</g>
+<!-- critical refutation edge -->
+<circle cx="476" cy="376" r="19" fill="#d4937b" stroke="#fffaf3" stroke-width="4"/>
+<path d="M493 376 L600 377" fill="none" stroke="#bd6e58" stroke-width="5" marker-end="url(#red)"/>
+<rect x="512" y="337" width="74" height="29" rx="7" fill="#f9e5d9"/>
+<text x="549" y="357" font-size="16" fill="#9c5443" text-anchor="middle">反驳</text>
+<!-- mechanical relationship switch -->
+<path d="M535 337 L535 307 L580 307" fill="none" stroke="#a37e66" stroke-width="3"/>
+<rect x="571" y="255" width="144" height="60" rx="10" fill="#f8ead3" stroke="#b79a78" stroke-width="3"/>
+<text x="591" y="278" font-size="14">关系控制</text>
+<text x="591" y="300" font-size="14" fill="#498d70">启用</text><text x="674" y="300" font-size="14" fill="#857e73">关闭</text>
+<rect x="624" y="287" width="44" height="16" rx="8" fill="#9bbca8"/><circle cx="633" cy="295" r="7" fill="#fff"/>
+<!-- small researcher at bottom right holding a node and loose connecting edge -->
+<circle cx="1240" cy="594" r="30" fill="#ecc9ad" stroke="#71857b" stroke-width="3"/>
+<path d="M1211 590 Q1214 561 1241 563 Q1270 562 1270 590" fill="#63776d"/>
+<path d="M1195 685 Q1200 627 1240 627 Q1281 627 1285 685Z" fill="#bfd2c5" stroke="#71857b" stroke-width="3"/>
+<circle cx="1171" cy="620" r="27" fill="#eec986" stroke="#9b7a4e" stroke-width="4"/>
+<path d="M1171 591 C1165 559 1190 548 1217 550" fill="none" stroke="#c08b52" stroke-width="4" stroke-dasharray="7 5"/>
+<circle cx="1217" cy="550" r="5" fill="#c08b52"/>
+<path d="M1221 646 L1190 629" stroke="#71857b" stroke-width="9" stroke-linecap="round"/>
+<text x="1110" y="742" font-size="17">新证据 + 一条待连接的关系</text>
+<!-- legend -->
+<circle cx="215" cy="654" r="10" fill="#5bb386"/><text x="234" y="661" font-size="16">可用</text>
+<circle cx="310" cy="654" r="10" fill="#b8bfba"/><text x="329" y="661" font-size="16">不可用</text>
+</g>
+</svg>

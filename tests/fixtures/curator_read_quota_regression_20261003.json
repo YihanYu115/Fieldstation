@@ -1,0 +1,239 @@
+{
+  "source": "read-only projection of the 26 quota errors in the Luna 2026-10-03 MCP traces",
+  "cases": [
+    {
+      "case": "P_order_fix/curator",
+      "sequence": 2,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix/curator",
+      "sequence": 3,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix/curator",
+      "sequence": 5,
+      "tool": "read_field_source",
+      "field": "max_bytes",
+      "requested": 30000,
+      "applied": 16384,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix/successor",
+      "sequence": 1,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix/successor",
+      "sequence": 2,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 2,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 3,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 4,
+      "tool": "read_field_source",
+      "field": "max_bytes",
+      "requested": 20000,
+      "applied": 16384,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 20,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 20,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 21,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 20,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 22,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 20,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "P_order_fix_repeat/curator",
+      "sequence": 23,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 20,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 2,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 3,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 7,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 8,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 9,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 10,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 11,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "U_calibration/curator",
+      "sequence": 12,
+      "tool": "locate_field_excerpt",
+      "field": "limit",
+      "requested": 10,
+      "applied": 8,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/curator",
+      "sequence": 2,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/curator",
+      "sequence": 3,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/curator",
+      "sequence": 15,
+      "tool": "list_curated_field_items",
+      "field": "max_bytes",
+      "requested": 20000,
+      "applied": 16384,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/successor",
+      "sequence": 1,
+      "tool": "list_curated_field_items",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/successor",
+      "sequence": 2,
+      "tool": "list_field_reviews",
+      "field": "limit",
+      "requested": 100,
+      "applied": 50,
+      "prior_error_code": "invalid_arguments"
+    },
+    {
+      "case": "Z_empty/successor",
+      "sequence": 6,
+      "tool": "read_field_review",
+      "field": "max_bytes",
+      "requested": 20000,
+      "applied": 16384,
+      "prior_error_code": "invalid_arguments"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 880" role="img" aria-labelledby="title desc">
+<title id="title">Listener 发现与会话启动：漫画构图草图</title>
+<desc id="desc">实验室墙上有留言板与空的待办板，监听装置观察待办；配置脚本和 Host 启动一个智者会话，以半显现的小人表现。气泡文字是项目选择的示例条件。</desc>
+<rect width="1500" height="880" fill="#f8f5ec"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#344a42">
+<text x="52" y="52" font-size="28" font-weight="700">构图草图：发现待办情况，按配置启动会话</text>
+<text x="52" y="86" font-size="17" fill="#76877c">虚构示例 · 一个实验室场景 · 气泡说明由脚本选定的条件</text>
+<!-- lab wall -->
+<rect x="45" y="112" width="1410" height="670" rx="18" fill="#f0e3cc" stroke="#baa486" stroke-width="4"/>
+<path d="M45 668 H1455 V782 H45Z" fill="#e0cfb5"/>
+<!-- boards -->
+<rect x="110" y="179" width="365" height="304" rx="10" fill="#314e46" stroke="#8b6b48" stroke-width="12"/>
+<rect x="183" y="146" width="218" height="61" rx="10" fill="#f3e4cb" stroke="#967b59" stroke-width="4"/><text x="292" y="187" text-anchor="middle" font-size="26" font-weight="700">BOARD</text>
+<text x="145" y="263" font-size="21" fill="#f5f4df" font-weight="700">国王指令：</text>
+<text x="145" y="304" font-size="20" fill="#f5f4df">先把时间魔法探索清楚，</text>
+<text x="145" y="343" font-size="20" fill="#f5f4df">在空间魔法之前停下。</text>
+<rect x="525" y="179" width="365" height="304" rx="10" fill="#fffaf0" stroke="#8b6b48" stroke-width="12"/>
+<rect x="600" y="146" width="218" height="61" rx="10" fill="#f3e4cb" stroke="#967b59" stroke-width="4"/><text x="709" y="187" text-anchor="middle" font-size="26" font-weight="700">QUEUE</text>
+<rect x="560" y="249" width="24" height="24" fill="none" stroke="#b5bcad" stroke-width="3"/><path d="M600 261 H813" stroke="#d4d9ce" stroke-width="4"/>
+<rect x="560" y="302" width="24" height="24" fill="none" stroke="#b5bcad" stroke-width="3"/><path d="M600 314 H813" stroke="#d4d9ce" stroke-width="4"/>
+<text x="707" y="413" text-anchor="middle" font-size="22" fill="#9ca99b">No pending tasks</text>
+<!-- listener machine -->
+<rect x="195" y="540" width="265" height="167" rx="22" fill="#81a99b" stroke="#567b6d" stroke-width="5"/>
+<rect x="237" y="566" width="180" height="55" rx="8" fill="#e9f1e7" stroke="#567b6d" stroke-width="3"/>
+<text x="327" y="603" text-anchor="middle" font-size="24" font-weight="700">LISTENER</text>
+<circle cx="260" cy="657" r="14" fill="#efc978" stroke="#6a8676" stroke-width="3"/><circle cx="308" cy="657" r="14" fill="#dce9dc" stroke="#6a8676" stroke-width="3"/>
+<path d="M377 641 V670 M360 655 H393" stroke="#557b6c" stroke-width="4"/>
+<!-- listener observing -->
+<path d="M460 577 C520 540 665 535 704 494" fill="none" stroke="#7e9c8e" stroke-width="4" stroke-dasharray="9 8"/>
+<text x="512" y="554" font-size="16" fill="#688579">只读发现</text>
+<!-- controls connection -->
+<path d="M460 660 H548" stroke="#9f8062" stroke-width="5"/>
+<rect x="550" y="625" width="208" height="69" rx="9" fill="#f7ead4" stroke="#aa8e70" stroke-width="3"/>
+<text x="654" y="653" text-anchor="middle" font-size="17">配置脚本 + Host</text><text x="654" y="678" text-anchor="middle" font-size="14" fill="#877257">选择条件并启动会话</text>
+<!-- magic cloud -->
+<path d="M766 665 C825 605 872 616 908 603 C951 584 984 607 1032 579" fill="none" stroke="#d1ad71" stroke-width="6" stroke-dasharray="10 9"/>
+<g fill="#e0bf82"><circle cx="866" cy="621" r="6"/><circle cx="929" cy="574" r="5"/><circle cx="1004" cy="620" r="7"/><circle cx="1019" cy="548" r="5"/></g>
+<!-- half-formed little sage -->
+<path d="M1079 670 Q1085 591 1133 584 Q1176 591 1186 670Z" fill="#bad2c6" stroke="#6c887b" stroke-width="4" opacity=".75"/>
+<circle cx="1133" cy="543" r="41" fill="#ebccae" stroke="#6c887b" stroke-width="4"/>
+<path d="M1092 535 L1133 450 L1174 535Z" fill="#678e80" stroke="#57786d" stroke-width="4"/>
+<path d="M1105 551 Q1133 590 1161 551 Q1157 600 1133 610 Q1108 600 1105 551Z" fill="#f5f2df"/>
+<path d="M1083 652 H1182 M1093 669 H1172" stroke="#f0e3cc" stroke-width="9" stroke-dasharray="12 12"/>
+<text x="1134" y="730" text-anchor="middle" font-size="18">智者会话 · 正在显现</text>
+<!-- speech bubble -->
+<path d="M926 231 Q926 207 951 207 H1360 Q1385 207 1385 232 V398 Q1385 423 1360 423 H1122 L1065 463 L1081 423 H951 Q926 423 926 398Z" fill="#fffdf7" stroke="#b69a75" stroke-width="4"/>
+<text x="953" y="265" font-size="20" font-weight="700">检测到当前 Queue 中没有待办，</text>
+<text x="953" y="301" font-size="20" font-weight="700">正在召唤智者安排待办！</text>
+<text x="953" y="349" font-size="16" fill="#738277">（项目配置的示例条件）</text>
+<text x="52" y="830" font-size="17" fill="#6c7e72">画面建议：两块板在墙上；机器和半显现人物较小；气泡与动作一眼可读。</text>
+</g></svg>

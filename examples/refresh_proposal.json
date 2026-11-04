@@ -1,0 +1,22 @@
+{
+  "issue_id": "dualC-q1-excitation",
+  "expected_conclusion_revision": 0,
+  "status": "provisional",
+  "statement": "当前 excitation 工作点采用 4.6 GHz；仍保留进一步辨识限制。",
+  "structured_outputs": {
+    "f01_ghz": 4.6
+  },
+  "confidence": "medium",
+  "applicability": "当前样品会话",
+  "limitations": [
+    "需要后续低功率复测确认稳定性"
+  ],
+  "change_summary": "吸收 multi-peak episode revision 1。",
+  "basis": [
+    {
+      "issue_id": "dualC-q1-multipeak",
+      "conclusion_revision": 1
+    }
+  ]
+}
+

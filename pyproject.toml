@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "issue-network-manager"
+version = "0.9.0rc11"
+description = "Generic, registry-driven issue network ledger for experimental knowledge"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Yi-Han Yu"}]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/YihanYu115/Fieldstation"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "mypy>=1.11",
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+issuectl = "issue_manager.cli:main"
+im-project-host = "project_package.host:main"
+fieldstation-console = "fieldstation_console.server:main"
+
+[tool.setuptools.packages.find]
+include = ["issue_manager*", "project_package*", "fieldstation_console*"]
+exclude = ["issue_manager.__pycache__", "issue_manager.*.__pycache__"]
+namespaces = false
+
+[tool.setuptools.package-data]
+issue_manager = ["current_schema.sql"]
+project_package = ["contracts.json"]
+fieldstation_console = ["*.html", "*.css", "*.js"]
+
+[tool.setuptools.data-files]
+"share/issue-network-manager/bundles/qubit" = [
+  "feature_bundles/org.example.superconducting.qubit-characterization/*.json",
+]
+"share/issue-network-manager/bundles/materials" = [
+  "feature_bundles/org.example.materials.sample-characterization/*.json",
+]
+"share/issue-network-manager/bundles/compat" = [
+  "feature_bundles/org.issue-manager.compat.experimental-core/*.json",
+]
+"share/issue-network-manager/bundles/registered-renderer" = [
+  "feature_bundles/org.example.reporting.registered-renderer/*.json",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "orchestration/src"]
+addopts = "-ra --strict-config"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+check_untyped_defs = true
+ignore_missing_imports = true
+show_error_codes = true
+warn_redundant_casts = true
+warn_unused_ignores = true

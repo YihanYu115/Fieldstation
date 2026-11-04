@@ -1,0 +1,62 @@
+{
+  "fixture_version": 2,
+  "synthetic": true,
+  "issue": "network-100-add-5",
+  "inputs": {
+    "original_draft": "评估随机故障损失，训练与评估协议尚未区分。",
+    "protocol_clarification": "训练使用40个故障样本；独立评估使用300个样本；不可混用。"
+  },
+  "scenarios": [
+    {
+      "id": "revise_original",
+      "target": "original_draft",
+      "changes": [
+        "protocol_clarification"
+      ],
+      "purpose": "process-change",
+      "expected": {
+        "judgment_needed": true,
+        "new_proposals": 1,
+        "new_assessments": 1,
+        "preserve_original": true,
+        "effective": false
+      },
+      "implementation": "P1/P2 deterministic public HTTP chain in test_workflow_coverage.py::test_three_stage_http_handoff; no model or scientific acceptance"
+    },
+    {
+      "id": "repeat_covered_change",
+      "target": "new_draft_from_revise_original",
+      "changes": [
+        "protocol_clarification"
+      ],
+      "purpose": "process-change",
+      "precondition": "P2 authority query proves first assessment still valid for this exact target, input and policy",
+      "expected": {
+        "judgment_needed": false,
+        "new_attempts": 0,
+        "new_proposals": 0,
+        "new_assessments": 0,
+        "return_prior_receipt": true
+      },
+      "implementation": "P1/P2 deterministic public HTTP chain in test_workflow_coverage.py::test_three_stage_http_handoff; no model or scientific acceptance"
+    },
+    {
+      "id": "explicit_independent_check",
+      "target": "new_draft_from_revise_original",
+      "changes": [
+        "protocol_clarification"
+      ],
+      "purpose": "independent-check",
+      "expected": {
+        "judgment_needed": true,
+        "decision": "no_change",
+        "new_proposals": 0,
+        "new_assessments": 1,
+        "task_status": "completed",
+        "effective": false
+      },
+      "implementation": "P1/P2 deterministic public HTTP chain in test_workflow_coverage.py::test_three_stage_http_handoff; no model or scientific acceptance",
+      "dispatch_purpose": "independent-check/review-001"
+    }
+  ]
+}

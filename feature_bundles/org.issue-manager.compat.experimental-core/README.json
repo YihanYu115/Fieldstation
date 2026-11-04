@@ -1,0 +1,8 @@
+{
+  "kind": "routing_profile",
+  "name": "compatibility-bundle-source-marker",
+  "api_version": "routing-profile/v1",
+  "definition": {
+    "note": "The authoritative compatibility definitions are packaged in issue_manager.compatibility so fresh installs and atomic migrations use identical bytes."
+  }
+}

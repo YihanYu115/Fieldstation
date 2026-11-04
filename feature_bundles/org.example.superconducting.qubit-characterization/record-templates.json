@@ -1,0 +1,32 @@
+{
+  "kind": "record_template",
+  "name": "qubit-basic-parameters",
+  "api_version": "record-template/v1",
+  "definition": {
+    "title": "Qubit basic parameters",
+    "applies_to_issue_types": ["qubit"],
+    "additional_fields": false,
+    "upgrade_compatibility": "compatible",
+    "fields": {
+      "f01": {"type": "uncertain_quantity", "allowed_units": ["Hz", "kHz", "MHz", "GHz"], "unit_factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000, "GHz": 1000000000}, "queryable": true, "evidence_required": true},
+      "f12": {"type": "uncertain_quantity", "allowed_units": ["Hz", "kHz", "MHz", "GHz"], "unit_factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000, "GHz": 1000000000}, "queryable": true},
+      "anharmonicity": {"type": "uncertain_quantity", "allowed_units": ["Hz", "kHz", "MHz", "GHz"], "unit_factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000, "GHz": 1000000000}, "queryable": true},
+      "readout_frequency": {"type": "uncertain_quantity", "allowed_units": ["Hz", "kHz", "MHz", "GHz"], "unit_factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000, "GHz": 1000000000}, "queryable": true},
+      "T1": {"type": "uncertain_quantity", "allowed_units": ["ns", "us", "ms", "s"], "unit_factors": {"ns": 0.000000001, "us": 0.000001, "ms": 0.001, "s": 1}, "queryable": true, "evidence_required": true},
+      "T2_ramsey": {"type": "uncertain_quantity", "allowed_units": ["ns", "us", "ms", "s"], "unit_factors": {"ns": 0.000000001, "us": 0.000001, "ms": 0.001, "s": 1}, "queryable": true},
+      "T2_echo": {"type": "uncertain_quantity", "allowed_units": ["ns", "us", "ms", "s"], "unit_factors": {"ns": 0.000000001, "us": 0.000001, "ms": 0.001, "s": 1}, "queryable": true},
+      "thermal_population": {"type": "uncertain_quantity", "allowed_units": ["fraction", "percent"], "unit_factors": {"fraction": 1, "percent": 0.01}, "queryable": true},
+      "dispersive_shift": {"type": "uncertain_quantity", "allowed_units": ["Hz", "kHz", "MHz"], "unit_factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000}, "queryable": true},
+      "operating_point": {"type": "string", "nullable": true, "queryable": true},
+      "measurement_method": {"type": "string", "nullable": true},
+      "calibration_context": {"type": "object", "nullable": true}
+    },
+    "profiles": {
+      "draft": {"required": []},
+      "provisional": {"required": ["f01"]},
+      "accepted": {"required": ["f01", "T1"], "evidence_required": ["f01", "T1"], "minimum_verification_level": "source_verified"},
+      "canonical": {"required": ["f01", "T1"], "evidence_required": ["f01", "T1"], "minimum_verification_level": "snapshot_verified"},
+      "report": {"required": ["f01", "T1"], "evidence_required": ["f01", "T1"], "minimum_verification_level": "source_verified"}
+    }
+  }
+}

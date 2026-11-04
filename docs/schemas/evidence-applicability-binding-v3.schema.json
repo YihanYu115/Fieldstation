@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "evidence-applicability-binding/v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract", "kind", "scope_issue_id", "target", "changes", "change_refs", "policy", "purpose", "context_anchor"],
+  "properties": {
+    "contract": {"const": "evidence-applicability-binding/v3"},
+    "kind": {"const": "evidence_applicability"},
+    "scope_issue_id": {"type": "string", "minLength": 1, "maxLength": 512},
+    "target": {"type": "object", "additionalProperties": false,
+      "required": ["evidence_id", "semantic_revision", "proof_id", "manifest_id"],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1, "maxLength": 512},
+        "semantic_revision": {"type": "integer", "minimum": 0},
+        "proof_id": {"type": ["string", "null"], "maxLength": 512},
+        "manifest_id": {"type": ["string", "null"], "maxLength": 512}
+      }},
+    "changes": {"type": "array", "minItems": 1, "maxItems": 16, "uniqueItems": true, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["change_ref", "kind", "action", "relation"],
+      "properties": {
+        "change_ref": {"type": "string", "minLength": 1, "maxLength": 512},
+        "kind": {"const": "evidence_relation_changed"},
+        "action": {"enum": ["create", "reactivate"]},
+        "relation": {"type": "object", "additionalProperties": false,
+          "required": ["consumer_evidence_id", "provider_evidence_id", "relation_type", "active"],
+          "properties": {
+            "consumer_evidence_id": {"type": "string", "minLength": 1, "maxLength": 512},
+            "provider_evidence_id": {"type": "string", "minLength": 1, "maxLength": 512},
+            "relation_type": {"const": "challenges"}, "active": {"const": true}
+          }}
+      }}},
+    "change_refs": {"type": "array", "minItems": 1, "maxItems": 16, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 512}},
+    "policy": {"const": "evidence-applicability/v1"},
+    "purpose": {"const": "review_scope_membership"},
+    "context_anchor": {"type": "object"}
+  }
+}

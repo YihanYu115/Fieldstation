@@ -1,0 +1,141 @@
+{
+  "format": "evidence-applicability-contract-fixture/v1",
+  "scope": {
+    "kind": "issue_conclusion",
+    "issue_id": "q2.2-f10"
+  },
+  "decision_boundaries": [
+    {
+      "id": "D-01",
+      "test_boundary": "test_v18_uses_separate_immutable_versions_and_heads"
+    },
+    {
+      "id": "D-02",
+      "test_boundary": "test_scope_is_registered_issue_identity_without_inheritance"
+    },
+    {
+      "id": "D-03",
+      "test_boundary": "test_target_is_fixed_and_preserves_nullable_proof_manifest_snapshot"
+    },
+    {
+      "id": "D-04",
+      "test_boundary": "test_basis_is_nonempty_fixed_typed_material"
+    },
+    {
+      "id": "D-05",
+      "test_boundary": "test_distinct_decision_keys_remain_independent"
+    },
+    {
+      "id": "D-06",
+      "test_boundary": "test_only_a_consistent_exclude_set_can_exclude"
+    },
+    {
+      "id": "D-07",
+      "test_boundary": "test_ordinary_relation_contracts_have_no_applicability_effect"
+    },
+    {
+      "id": "D-08",
+      "test_boundary": "test_applicability_version_is_a_fixed_typed_material_endpoint"
+    },
+    {
+      "id": "D-09",
+      "test_boundary": "test_future_write_contract_is_one_changeset_operation_with_four_actions"
+    },
+    {
+      "id": "D-10",
+      "test_boundary": "test_qualification_is_derived_and_never_request_supplied"
+    },
+    {
+      "id": "D-11",
+      "test_boundary": "test_schema_installation_has_no_direct_freshness_or_currentness_write"
+    },
+    {
+      "id": "D-12",
+      "test_boundary": "test_upgrade_keeps_context_currentness_v1_active_and_v2_inactive"
+    },
+    {
+      "id": "D-13",
+      "test_boundary": "test_future_v2_separates_comparison_context_from_model_materials"
+    },
+    {
+      "id": "D-14",
+      "test_boundary": "test_schema_has_no_persistent_applicability_projection_cache"
+    },
+    {
+      "id": "D-15",
+      "test_boundary": "test_candidate_discovery_cost_is_not_promised_constant"
+    }
+  ],
+  "q2_2_f10_selection_fixture": {
+    "candidate_count": 13,
+    "included_count": 10,
+    "excluded_count": 2,
+    "unresolved_count": 1,
+    "selected_evidence_count": 11,
+    "candidates": [
+      {"evidence_id": "q2.2-f10-fit-01", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-02", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-03", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-04", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-05", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-06", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-07", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-08", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-09", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-fit-10", "semantic_revision": 1, "qualified_effects": [], "expected_state": "included"},
+      {"evidence_id": "q2.2-f10-old-fit-a", "semantic_revision": 3, "qualified_effects": ["exclude"], "expected_state": "excluded"},
+      {"evidence_id": "q2.2-f10-old-fit-b", "semantic_revision": 2, "qualified_effects": ["exclude"], "expected_state": "excluded"},
+      {"evidence_id": "q2.2-f10-disputed-fit", "semantic_revision": 1, "qualified_effects": ["exclude", "include"], "expected_state": "unresolved"}
+    ],
+    "expected_material_policy": {
+      "included_body_count": 10,
+      "excluded_body_count": 0,
+      "unresolved_body_count": 1,
+      "unresolved_decision_details_count": 2,
+      "excluded_history_remains_traceable": true
+    }
+  },
+  "changeset_operation_fixture": {
+    "allowed_request_fields": [
+      "op",
+      "action",
+      "decision_key",
+      "expected_version_id",
+      "expected_active",
+      "definition",
+      "reason"
+    ],
+    "actions": ["add", "replace", "disable", "enable"],
+    "forbidden_derived_fields": ["qualification", "state", "freshness", "needs_update"],
+    "example_add": {
+      "op": "evidence_applicability_decision",
+      "action": "add",
+      "decision_key": "q2.2-f10:old-fit-a",
+      "expected_version_id": "",
+      "expected_active": false,
+      "definition": {
+        "scope": {"kind": "issue_conclusion", "issue_id": "q2.2-f10"},
+        "target": {
+          "kind": "evidence_version",
+          "evidence_id": "q2.2-f10-old-fit-a",
+          "binding": "fixed",
+          "semantic_revision": 3,
+          "proof_id": null,
+          "manifest_id": null
+        },
+        "effect": "exclude",
+        "basis": [
+          {
+            "kind": "evidence_version",
+            "evidence_id": "q2.2-f10-drift-test",
+            "semantic_revision": 1,
+            "proof_id": null,
+            "manifest_id": null,
+            "snapshot": {"content_hash": "fixture-drift-test"}
+          }
+        ]
+      },
+      "reason": "The drift test limits the older fit to its original bias interval."
+    }
+  }
+}

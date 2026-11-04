@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="10_five_role_workflow" name="目前五岗工作流示意">
+    <mxGraphModel page="1" pageScale="1" pageWidth="1600" pageHeight="940" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="edge0" parent="1" source="manager" target="experimenter" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;exitX=1.0;exitY=0.4666666666666667;exitPerimeter=0;entryX=0.0;entryY=0.4666666666666667;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" parent="1" source="experimenter" target="curator" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;exitX=1.0;exitY=0.4666666666666667;exitPerimeter=0;entryX=0.0;entryY=0.4666666666666667;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" parent="1" source="curator" target="manager" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;dashed=1;exitX=0.5;exitY=0.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="100" />
+              <mxPoint x="250" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge3" parent="1" source="experimenter" target="manager" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;dashed=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.8472222222222222;entryY=1.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="385" />
+              <mxPoint x="375" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge4" parent="1" source="manager" target="scientist" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;dashed=1;exitX=0.2777777777777778;exitY=1.0;exitPerimeter=0;entryX=0.2777777777777778;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" parent="1" source="scientist" target="manager" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.7222222222222222;exitY=0.0;exitPerimeter=0;entryX=0.7222222222222222;entryY=1.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" parent="1" source="scientist" target="conclusion" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" parent="1" source="conclusion" target="scientist" style="edgeStyle=none;strokeColor=#7C3AED;strokeWidth=2.5;endArrow=block;endFill=1;dashed=1;exitX=0.5121951219512195;exitY=0.0;exitPerimeter=0;entryX=0.9166666666666666;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="495" />
+              <mxPoint x="400" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge8" parent="1" source="curator" target="im" style="edgeStyle=none;strokeColor=#2563EB;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.8666666666666667;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" parent="1" source="scientist" target="im" style="edgeStyle=none;strokeColor=#2563EB;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.13333333333333333;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" parent="1" source="conclusion" target="im" style="edgeStyle=none;strokeColor=#2563EB;strokeWidth=2.5;endArrow=block;endFill=1;exitX=0.5121951219512195;exitY=1.0;exitPerimeter=0;entryX=0.5666666666666667;entryY=0.0;entryPerimeter=0;" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" value="&lt;b style=&quot;font-size:32px&quot;&gt;经理：安排工作&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;把研究建议变成局部任务&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;判断下一步、等待或结束&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="experimenter" value="&lt;b style=&quot;font-size:32px&quot;&gt;实验员：执行任务&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;开展计算或实验&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;交付结果、来源与验收判断&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="620" y="180" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="curator" value="&lt;b style=&quot;font-size:32px&quot;&gt;整理员：整理入账&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;整理材料，登记贡献&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;补充关系与整理意见&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="180" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="scientist" value="&lt;b style=&quot;font-size:32px&quot;&gt;科学家：作出判断&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;提出可检验的问题&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;给出解释、方向和限制&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="70" y="560" width="360" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="conclusion" value="&lt;b style=&quot;font-size:32px&quot;&gt;结论员：形成结论&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;核对判断与采用依据&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;保存结论，或提出具体缺口&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="690" y="560" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="im" value="&lt;b style=&quot;font-size:32px&quot;&gt;IM：保存材料、证据关系与结论，维护历史和依据变化&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:26px;color:#475569&quot;&gt;各岗按权限读写 IM；编排程序负责触发、交接、准确等待与恢复。&lt;/span&gt;" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;rounded=1;arcSize=10;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2.5;fontSize=26;align=center;verticalAlign=middle;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="830" width="1500" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="label0" value="发布局部任务" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="442.0" y="198.5" width="166.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label1" value="结果包已收件" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="992.0" y="198.5" width="166.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="若经理已等待：指定材料的整理结果到达后接续" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="537.0" y="80.5" width="526.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label3" value="验收未满足 / 执行已停的中断" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="593.0" y="365.5" width="334.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="无可派工作时&lt;br&gt;请求新方向" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="67.0" y="410.0" width="166.0" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label5" value="研究建议" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="291.0" y="425.5" width="118.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label6" value="判断与依据&lt;br&gt;或原问题答复" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="477.0" y="600.0" width="166.0" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label7" value="有具体科学缺口时：请求澄清" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="503.0" y="475.5" width="334.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label8" value="保存贡献、关系&lt;br&gt;与整理结果" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="1255.0" y="535.0" width="190.0" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="label9" value="新解释入账" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="179.0" y="750.5" width="142.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="label10" value="核对并保存结论" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;fillColor=#FFFFFF;strokeColor=none;align=center;verticalAlign=middle;fontSize=24;fontColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="805.0" y="750.5" width="190.0" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="note0" value="实线：主要交付方向" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="238.0" y="15" width="244.0" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" value="虚线：满足标注条件后才请求或接续" style="fontFamily=Microsoft YaHei;html=1;whiteSpace=wrap;text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontColor=#7C3AED;" vertex="1" parent="1">
+          <mxGeometry x="917.0" y="15" width="426.0" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

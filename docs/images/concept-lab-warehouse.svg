@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 800" role="img" aria-labelledby="title desc">
+<title id="title">Fieldstation 开头漫画构图草图：实验室、投件箱与 IM 仓库</title>
+<desc id="desc">左侧窗外是探索现场，实验室墙上有留言板和待办板，人物在实验台工作。中间有投件箱，右侧是带证据网络和管理员的仓库；亮色与灰色展示证据网络的不同状态。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#72978c"/></marker></defs>
+<rect width="1500" height="800" fill="#f8f6ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#294441">
+<text x="48" y="55" font-size="29" font-weight="700">开头图构图草图</text><text x="48" y="89" font-size="17" fill="#6e817b">一个科研场景：探索现场 · 实验室 · 投件箱 · IM 仓库</text>
+<!-- landscape -->
+<g transform="translate(14 0) scale(.65 1)">
+<rect x="40" y="135" width="225" height="485" rx="15" fill="#e6f0e8" stroke="#a9c0b2" stroke-width="3"/>
+<circle cx="210" cy="190" r="26" fill="#efd9a5"/>
+<path d="M40 430 L112 305 L155 377 L194 320 L265 425 V620 H40Z" fill="#c5dbce"/>
+<path d="M40 501 Q120 447 265 480 V620 H40Z" fill="#a9cbb8"/>
+<path d="M62 563 Q143 498 233 535" fill="none" stroke="#f9f5e9" stroke-width="9" stroke-dasharray="17 11"/>
+<circle cx="100" cy="451" r="13" fill="#627f72"/><path d="M100 464 V508 M100 479 L81 494 M100 478 L119 490 M100 508 L86 533 M100 508 L115 531" fill="none" stroke="#627f72" stroke-width="6" stroke-linecap="round"/>
+<text x="152" y="590" text-anchor="middle" font-size="22">探索现场</text>
+</g>
+<g transform="translate(-95 -8) scale(1.07 1.08)">
+<!-- laboratory -->
+<rect x="285" y="135" width="610" height="485" rx="15" fill="#fffdfa" stroke="#9db3a8" stroke-width="3"/>
+<text x="306" y="170" font-size="21" font-weight="700">实验室</text>
+<!-- boards -->
+<rect x="320" y="193" width="205" height="141" rx="7" fill="#e9d8bb" stroke="#9a8166" stroke-width="3"/>
+<text x="337" y="220" font-size="18" font-weight="700">留言板 · Board</text>
+<rect x="340" y="236" width="166" height="75" rx="3" fill="#fff9df"/>
+<text x="350" y="259" font-size="13">Night vision potion</text><text x="350" y="279" font-size="13">expired — don't drink!</text>
+<rect x="552" y="193" width="205" height="141" rx="7" fill="#e9d8bb" stroke="#9a8166" stroke-width="3"/>
+<text x="569" y="220" font-size="18" font-weight="700">待办 · Queue</text>
+<g fill="none" stroke="#8b978c" stroke-width="2"><rect x="568" y="242" width="12" height="12"/><rect x="568" y="278" width="12" height="12"/></g>
+<text x="587" y="252" font-size="11">Find a hero's sword on</text><text x="587" y="266" font-size="11">Alice Mountain.</text>
+<text x="587" y="288" font-size="11">Look for dwarves in</text><text x="587" y="302" font-size="11">Bob's Cave.</text>
+<!-- researcher and bench -->
+<circle cx="535" cy="407" r="33" fill="#eac5a9" stroke="#71897e" stroke-width="3"/>
+<path d="M502 401 Q502 369 532 369 Q570 368 568 401" fill="#61766c"/>
+<path d="M485 510 Q493 443 535 443 Q579 443 586 510Z" fill="#bcd5c7" stroke="#71897e" stroke-width="3"/>
+<path d="M342 510 H803 V538 H342Z" fill="#e0cfb3" stroke="#9b9584" stroke-width="3"/>
+<path d="M375 537 V582 M772 537 V582" stroke="#9b9584" stroke-width="5"/>
+<path d="M638 459 V489 L625 509 H685 L671 489 V459 M631 459 H678" fill="none" stroke="#72978c" stroke-width="4"/>
+<path d="M628 500 H682" stroke="#b7d0a5" stroke-width="6"/>
+<rect x="704" y="472" width="59" height="36" rx="4" fill="#f4e9d1" stroke="#b6ac94" stroke-width="2"/>
+<!-- inbox -->
+<rect x="902" y="415" width="98" height="95" rx="8" fill="#f0c98a" stroke="#ae8a59" stroke-width="3"/>
+<path d="M917 435 H985 M917 449 H985" stroke="#ae8a59" stroke-width="4"/>
+<text x="951" y="542" text-anchor="middle" font-size="18">投件箱</text><text x="951" y="565" text-anchor="middle" font-size="14" fill="#71817a">Inbox</text>
+<!-- store -->
+<rect x="1010" y="135" width="450" height="485" rx="15" fill="#f1f5ed" stroke="#8ba99a" stroke-width="4"/>
+<text x="1035" y="170" font-size="21" font-weight="700">IM 仓库</text>
+<!-- evidence graph -->
+<rect x="1042" y="195" width="385" height="240" rx="10" fill="#fff" stroke="#cad9cd" stroke-width="2"/>
+<text x="1060" y="222" font-size="16" fill="#58766b">证据网络（示意）</text>
+<g fill="none" stroke-linecap="round" stroke-width="6">
+<path d="M1090 290 L1190 255 L1280 300 L1372 258" stroke="#48a27e"/>
+<path d="M1190 255 L1210 365 L1320 378" stroke="#b8c2bc" stroke-dasharray="8 7"/>
+<path d="M1280 300 L1320 378" stroke="#b8c2bc" stroke-dasharray="8 7"/>
+</g>
+<g fill="#51ad86" stroke="#fff" stroke-width="4"><circle cx="1090" cy="290" r="15"/><circle cx="1190" cy="255" r="15"/><circle cx="1280" cy="300" r="15"/><circle cx="1372" cy="258" r="15"/></g>
+<g fill="#c2c9c4" stroke="#fff" stroke-width="4"><circle cx="1210" cy="365" r="15"/><circle cx="1320" cy="378" r="15"/></g>
+<!-- librarian -->
+<circle cx="1215" cy="492" r="25" fill="#eac5a9" stroke="#71897e" stroke-width="3"/>
+<path d="M1182 570 Q1185 519 1215 519 Q1248 519 1250 570Z" fill="#d5c3a1" stroke="#71897e" stroke-width="3"/>
+<path d="M1250 535 L1297 512" stroke="#71897e" stroke-width="8" stroke-linecap="round"/>
+<rect x="1300" y="484" width="78" height="84" rx="4" fill="#e0d2b7" stroke="#a7a18e" stroke-width="2"/>
+<path d="M1313 502 H1364 M1313 517 H1364 M1313 532 H1364 M1313 547 H1364" stroke="#a7a18e" stroke-width="3"/>
+<text x="1143" y="596" font-size="17">小管理员整理材料</text>
+</g>
+<!-- footer -->
+<text x="50" y="690" font-size="18">构图重点：实验室墙面有两块板；投件箱是小配角；IM 仓库里的证据网络清晰可见。</text>
+<text x="50" y="726" font-size="16" fill="#647b72">亮色 / 灰色仅用于表现证据状态变化；正式图可保留概念提示，具体计算以正文说明为准。</text>
+</g></svg>

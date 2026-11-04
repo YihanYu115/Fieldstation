@@ -1,0 +1,16 @@
+{
+  "status": "provisional",
+  "statement": "低功率复测后，暂时接受 4.6 GHz 为后续验证候选。",
+  "structured_outputs": {
+    "candidate_frequency_ghz": 4.6
+  },
+  "confidence": "medium",
+  "applicability": "当前样品会话与低功率 spectroscopy 条件",
+  "limitations": [
+    "仍需独立 Rabi 或 Ramsey 验证"
+  ],
+  "evidence_refs": [],
+  "change_summary": "从多峰候选中暂时选择 4.6 GHz。",
+  "basis": []
+}
+

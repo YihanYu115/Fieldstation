@@ -1,0 +1,24 @@
+{
+  "kind": "record_template",
+  "name": "material-basic-properties",
+  "api_version": "record-template/v1",
+  "definition": {
+    "title": "Material basic properties",
+    "applies_to_issue_types": ["characterization"],
+    "additional_fields": false,
+    "fields": {
+      "material_class": {"type": "enum", "enum": ["metal", "ceramic", "polymer", "composite", "other"], "required": true, "queryable": true},
+      "density": {"type": "uncertain_quantity", "allowed_units": ["kg/m3", "g/cm3"], "unit_factors": {"kg/m3": 1, "g/cm3": 1000}, "queryable": true, "evidence_required": true},
+      "hardness": {"type": "uncertain_quantity", "allowed_units": ["HV"], "unit_factors": {"HV": 1}, "nullable": true, "queryable": true},
+      "electrical_conductivity": {"type": "uncertain_quantity", "allowed_units": ["S/m"], "unit_factors": {"S/m": 1}, "nullable": true, "queryable": true},
+      "preparation_method": {"type": "string", "nullable": true}
+    },
+    "profiles": {
+      "draft": {"required": []},
+      "provisional": {"required": ["material_class"]},
+      "accepted": {"required": ["material_class", "density"], "evidence_required": ["density"], "minimum_verification_level": "source_verified"},
+      "canonical": {"required": ["material_class", "density"], "evidence_required": ["density"], "minimum_verification_level": "snapshot_verified"},
+      "report": {"required": ["material_class", "density"], "evidence_required": ["density"], "minimum_verification_level": "source_verified"}
+    }
+  }
+}

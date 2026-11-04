@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://issue-manager.invalid/schema/workflow-result-v2.schema.json",
+  "title": "Role-neutral Workflow Result v2 Evidence Chain",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract", "outcome", "outputs", "remaining", "handoff"],
+  "properties": {
+    "contract": {"const": "workflow-result/v2"},
+    "outcome": {"enum": ["complete", "partial", "blocked"]},
+    "outputs": {"type": "array", "maxItems": 8, "items": {"$ref": "#/$defs/output"}},
+    "remaining": {
+      "type": "array", "maxItems": 8,
+      "items": {"type": "string", "minLength": 1, "maxLength": 1000, "pattern": "\\S"}
+    },
+    "handoff": {"type": "object"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"outcome": {"const": "complete"}}},
+      "then": {"properties": {"remaining": {"maxItems": 0}}},
+      "else": {"properties": {"remaining": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"outcome": {"const": "partial"}}},
+      "then": {"properties": {"outputs": {"minItems": 1}}}
+    }
+  ],
+  "$defs": {
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "local_ref", "source_ref", "body"],
+      "properties": {
+        "action": {"const": "add_evidence"},
+        "local_ref": {
+          "type": "string", "minLength": 1, "maxLength": 128,
+          "pattern": "^[A-Za-z][A-Za-z0-9._-]*$"
+        },
+        "source_ref": {"type": "string", "minLength": 1, "maxLength": 512, "pattern": "\\S"},
+        "body": {"type": "string", "minLength": 1, "maxLength": 32000, "pattern": "\\S"},
+        "related_evidence": {
+          "type": "array", "minItems": 1, "maxItems": 8,
+          "items": {"$ref": "#/$defs/relation"}
+        }
+      }
+    },
+    "relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relation_type", "rationale"],
+      "properties": {
+        "provider_local_ref": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z][A-Za-z0-9._-]*$"},
+        "provider_evidence_id": {"type": "string", "minLength": 1, "maxLength": 512, "pattern": "\\S"},
+        "relation_type": {
+          "enum": ["depends_on", "derived_from", "reproduces", "supports", "challenges", "amends", "duplicates", "context_for"]
+        },
+        "rationale": {"type": "string", "minLength": 1, "maxLength": 2000, "pattern": "\\S"}
+      },
+      "oneOf": [
+        {"required": ["provider_local_ref"], "not": {"required": ["provider_evidence_id"]}},
+        {"required": ["provider_evidence_id"], "not": {"required": ["provider_local_ref"]}}
+      ]
+    }
+  }
+}

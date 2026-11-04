@@ -1,0 +1,8 @@
+{
+  "kind": "report",
+  "name": "example-plain-renderer",
+  "version": "1.0.0",
+  "protocol_version": "issue-manager-adapter/v1",
+  "timeout_seconds": 10,
+  "maximum_output_bytes": 1048576
+}

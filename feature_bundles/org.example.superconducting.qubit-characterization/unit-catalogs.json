@@ -1,0 +1,11 @@
+{
+  "kind": "unit_catalog",
+  "name": "laboratory-si-units",
+  "api_version": "unit-catalog/v1",
+  "definition": {
+    "dimensions": {
+      "frequency": {"canonical_unit": "Hz", "factors": {"Hz": 1, "kHz": 1000, "MHz": 1000000, "GHz": 1000000000}},
+      "time": {"canonical_unit": "s", "factors": {"ns": 0.000000001, "us": 0.000001, "ms": 0.001, "s": 1}}
+    }
+  }
+}

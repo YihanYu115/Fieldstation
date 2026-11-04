@@ -1,0 +1,16 @@
+{
+  "kind": "mapping_profile",
+  "name": "qubit-parameters-csv",
+  "api_version": "mapping-profile/v1",
+  "definition": {
+    "external_object_type": "qubit-parameter-row",
+    "external_object_id_field": "row_id",
+    "target_issue_field": "issue_id",
+    "target_template_ref": "org.example.superconducting/record_template/qubit-basic-parameters@1.0.0",
+    "mappings": [
+      {"source": "f01_GHz", "target": "f01", "coerce": "number", "unit": "GHz"},
+      {"source": "T1_us", "target": "T1", "coerce": "number", "unit": "us"},
+      {"source": "T2_ramsey_us", "target": "T2_ramsey", "coerce": "number", "unit": "us"}
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+include CHANGELOG.md
+include README.en.md
+include CONTRIBUTING.md
+include AGENTS.md
+recursive-include docs *.md *.json
+recursive-include docs *.svg *.drawio
+include docs/images/fieldstation-lab-comic-candidate-05.png
+include docs/images/issue-manager-evidence-comic-candidate-03.png
+include docs/images/listener-comic-candidate-01.png
+recursive-include examples *.json
+recursive-include examples *.py *.md
+recursive-include feature_bundles *.json
+recursive-include scripts *.py *.md
+recursive-include scripts *.ps1 *.mjs
+recursive-include tests *.py *.json
+recursive-include orchestration *.py *.json *.toml *.md
+recursive-include orchestration LICENSE
+recursive-include fieldstation_console *.py *.html *.css *.js *.md
+prune build
+prune dist
+prune node_modules
+prune workbench
+prune .pytest_cache
+prune .mypy_cache
+prune .ruff_cache
+prune credentials
+prune issue_ledger
+prune backups
+prune exports
+prune artifacts
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.sqlite*
+global-exclude *.db*
+global-exclude *.token
+global-exclude *.secret
+global-exclude *.improjectpkg
+global-exclude *.improject.zip
+global-exclude *.log
+global-exclude .coverage

@@ -1,0 +1,4 @@
+include README.md
+include LICENSE
+include QUEUE_TOOLS.md BOARD_TOOLS.md IM_TOOLS.md HOST_TOOLS.md PYTHON_TRIGGER.md ROLE_USAGE.md DESIGN.md
+include examples/python_queue_inbox.py examples/python_board_combination.py examples/python_connections.json

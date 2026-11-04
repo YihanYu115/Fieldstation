@@ -1,0 +1,24 @@
+{
+  "evidence_id": "evidence_example_9865",
+  "platform_id": "qualab-a",
+  "issue_id": "dualC-q1-excitation",
+  "source_packet_id": "packet_example_run_42",
+  "request_type": "statistics",
+  "request_role": "source_verification",
+  "requested_manifest_id": "manifest_example_9865_v1",
+  "question": "Compute the bounded oscillation contrast summary for the recorded Rabi trace.",
+  "requested_outputs": [
+    {
+      "type": "json",
+      "name": "contrast_summary",
+      "fields": ["point_count", "min", "max", "contrast"]
+    }
+  ],
+  "method_constraints": {
+    "column": "magnitude",
+    "row_range": [0, 200],
+    "max_rows": 201
+  },
+  "priority": 70,
+  "deadline_at": "2026-08-10T18:00:00+08:00"
+}

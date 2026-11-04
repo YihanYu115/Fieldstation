@@ -1,0 +1,46 @@
+{
+  "packet_version": 2,
+  "request_id": "dualC-q1-20260809-run-42-l1",
+  "routing_hints": {
+    "sample": "dualC",
+    "components": ["q1"],
+    "topic": "excitation"
+  },
+  "actions": ["spectroscopy", "rabihigh at three candidates"],
+  "observations": ["4.6 GHz gives regular Rabi oscillation"],
+  "evidence": [
+    {
+      "kind": "datavault_dataset",
+      "locator": "/YuYihan/20260701_dualC::dataset=9865",
+      "manifest": {
+        "manifest_version": 1,
+        "platform_id": "qualab-a",
+        "observed_at": "2026-08-09T14:32:18+08:00",
+        "sample_session_ref": "dualC/session-20260809-pm",
+        "content_identity": {
+          "immutable_revision": "dataset-9865"
+        },
+        "data_profile": {
+          "shape": [201, 4],
+          "schema": ["frequency", "i", "q", "magnitude"],
+          "units": {"frequency": "GHz"}
+        },
+        "execution": {
+          "experiment_function": "rabihigh",
+          "code_commit": "abc1234"
+        },
+        "summary": {
+          "candidate_frequency_ghz": 4.6,
+          "oscillation_visible": true
+        },
+        "preview_artifact_ids": [],
+        "mutable_source": false,
+        "adapter": {
+          "name": "qualab-manifest",
+          "version": "1.0.0"
+        }
+      }
+    }
+  ],
+  "proposed_changes": []
+}

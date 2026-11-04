@@ -1,0 +1,18 @@
+{
+  "packet_version": 2,
+  "request_id": "dualC-q1-20260809-run-42",
+  "routing_hints": {
+    "sample": "dualC",
+    "components": ["q1"],
+    "topic": "excitation"
+  },
+  "actions": ["spectroscopy", "rabihigh at three candidates"],
+  "observations": ["4.6 GHz gives regular Rabi oscillation"],
+  "evidence": [
+    {
+      "kind": "datavault_dataset",
+      "locator": "/YuYihan/20260701_dualC::dataset=9865"
+    }
+  ],
+  "proposed_changes": []
+}

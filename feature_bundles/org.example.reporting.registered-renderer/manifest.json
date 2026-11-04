@@ -1,0 +1,10 @@
+{
+  "bundle_format": "issue-manager-feature-bundle/v1",
+  "namespace": "org.example.reporting",
+  "name": "registered-renderer",
+  "version": "1.0.0",
+  "core_api": ">=0.8,<1.0",
+  "description": "Declaration-only registered Report Renderer example",
+  "registrations": ["renderers.json", "report-templates.json"],
+  "dependencies": []
+}

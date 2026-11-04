@@ -1,0 +1,21 @@
+{
+  "kind": "report_renderer",
+  "name": "plain-text",
+  "api_version": "report-renderer/v1",
+  "definition": {
+    "adapter_name": "example-plain-renderer",
+    "adapter_version": "1.0.0",
+    "protocol_version": "issue-manager-adapter/v1",
+    "supported_media_types": ["text/plain"],
+    "default_media_type": "text/plain",
+    "default_extension": "txt",
+    "configuration_schema": {
+      "type": "object",
+      "properties": {
+        "heading": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "deterministic_output": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "issue_template",
+  "name": "superconducting-qubit-project",
+  "api_version": "issue-template/v1",
+  "definition": {
+    "parent_relation": {"relation_type": "rolls_up_from", "impact_policy": "hard"},
+    "parameters": {
+      "sample": {"type": "string", "required": true},
+      "qubits": {"type": "array", "items": "string", "required": true}
+    },
+    "nodes": [
+      {
+        "id": "{sample}",
+        "issue_type": "sample",
+        "title": "{sample} sample",
+        "scope": {"sample": "{sample}"},
+        "topic": "sample"
+      },
+      {
+        "repeat": "qubits",
+        "as": "component",
+        "id": "{sample}-{component}",
+        "issue_type": "qubit",
+        "title": "{sample}/{component}",
+        "parent": "{sample}",
+        "scope": {"sample": "{sample}", "component": "{component}"},
+        "topic": "qubit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+<title id="title">证据关系变化与结论维护</title><desc id="desc">研究者声明 E2 反驳 E1，E3 反驳 E2。IM 计算证据资格，并与结论采用的依据比较；参与者继续判断。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#bb7258"/></marker></defs>
+<rect width="1200" height="480" rx="22" fill="#f8f5eb"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#263f40">
+<text x="45" y="50" font-size="25" font-weight="700">证据关系可以反复变化</text>
+<text x="45" y="81" font-size="16" fill="#57716f">虚构场景 · 关系由参与者明确声明</text>
+<g fill="#fff" stroke="#98b4ad" stroke-width="2">
+<rect x="48" y="130" width="290" height="118" rx="15"/><rect x="455" y="130" width="290" height="118" rx="15"/><rect x="862" y="130" width="290" height="118" rx="15"/>
+</g>
+<text x="70" y="165" font-size="20" font-weight="700">E1 · 原实验观察</text><text x="70" y="201" font-size="17">观察到方法 A 的改善</text><text x="70" y="226" font-size="15" fill="#57716f">结论作者明确采用</text>
+<text x="477" y="165" font-size="20" font-weight="700">E2 · 复现实验</text><text x="477" y="201" font-size="17">未得到相同结果</text>
+<text x="884" y="165" font-size="20" font-weight="700">E3 · 设备检查</text><text x="884" y="201" font-size="17">发现 E2 的线缆问题</text>
+<path d="M450 190 H345" stroke="#bb7258" stroke-width="3" marker-end="url(#arrow)"/><path d="M857 190 H752" stroke="#bb7258" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="355" y="175" font-size="16" fill="#9a563f">反驳</text><text x="762" y="175" font-size="16" fill="#9a563f">反驳</text>
+<rect x="48" y="303" width="1104" height="121" rx="15" fill="#e7f0eb"/>
+<text x="72" y="338" font-size="20" font-weight="700">IM 的两步维护</text>
+<text x="72" y="370" font-size="17">① 按关系计算证据资格和原因</text><text x="473" y="370" font-size="17">② 比较结论采用的依据，维护当前性</text>
+<text x="72" y="400" font-size="15" fill="#57716f">新证据不自动成为结论依据；科学判断与是否修订结论由参与者负责。</text>
+</g></svg>

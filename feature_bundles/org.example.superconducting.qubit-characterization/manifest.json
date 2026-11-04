@@ -1,0 +1,17 @@
+{
+  "bundle_format": "issue-manager-feature-bundle/v1",
+  "namespace": "org.example.superconducting",
+  "name": "qubit-characterization",
+  "version": "1.0.0",
+  "core_api": ">=0.8,<1.0",
+  "description": "Superconducting device characterization definitions",
+  "registrations": [
+    "issue-types.json",
+    "issue-templates.json",
+    "record-templates.json",
+    "report-templates.json",
+    "mapping-profiles.json",
+    "unit-catalogs.json"
+  ],
+  "dependencies": []
+}

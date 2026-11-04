@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "issue-workflow-orchestrator"
+version = "0.13.8"
+description = "Workflow orchestration adapters and persistent local task queue for Issue Manager"
+authors = [{name = "Yi-Han Yu"}]
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/YihanYu115/Fieldstation"
+
+[project.optional-dependencies]
+mcp = ["mcp==1.30.0", "jsonschema>=4.20,<5"]
+
+[project.scripts]
+workflow-tools = "workflow_orchestrator.tools_cli:main"
+
+[tool.setuptools.data-files]
+"share/issue-workflow-orchestrator" = ["README.md", "QUEUE_TOOLS.md", "BOARD_TOOLS.md", "IM_TOOLS.md", "HOST_TOOLS.md", "HTTP_MCP.md", "PYTHON_TRIGGER.md", "ROLE_USAGE.md", "CONCLUSION_RULES.md", "DESIGN.md"]
+"share/issue-workflow-orchestrator/examples" = ["examples/python_queue_inbox.py", "examples/python_board_combination.py", "examples/python_role_events.py", "examples/python_connections.json", "examples/host_role_guidance.json", "examples/dynamic_project_scheduler.py"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false

@@ -1,0 +1,34 @@
+{
+  "changeset_version": 1,
+  "source_packet_ids": ["packet_replace_me"],
+  "intent": "maintain-experiment-record",
+  "expected_revisions": {
+    "dualC-q1-excitation": {
+      "working_revision": 3,
+      "conclusion_revision": 2
+    }
+  },
+  "operations": [
+    {
+      "op": "attach_packet",
+      "packet_id": "packet_replace_me",
+      "issue_id": "dualC-q1-excitation"
+    },
+    {
+      "op": "append_work",
+      "issue_id": "dualC-q1-excitation",
+      "entry_type": "observation",
+      "body": "4.6 GHz produces regular Rabi oscillation"
+    },
+    {
+      "op": "propose_conclusion",
+      "issue_id": "dualC-q1-excitation",
+      "expected_conclusion_revision": 2,
+      "status": "provisional",
+      "statement": "Temporarily prefer 4.6 GHz as the q1 transition",
+      "structured_outputs": {},
+      "limitations": [],
+      "basis": []
+    }
+  ]
+}

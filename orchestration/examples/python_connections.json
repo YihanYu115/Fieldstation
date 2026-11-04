@@ -1,0 +1,1 @@
+{"connections":{"queue-b":{"endpoint":"http://127.0.0.1:18101","token_env":"QUEUE_READER_TOKEN"},"board-b":{"endpoint":"http://127.0.0.1:18102","token_env":"BOARD_READER_TOKEN"},"im-b":{"endpoint":"http://127.0.0.1:18103","token_env":"IM_READER_TOKEN"},"host-c":{"endpoint":"http://127.0.0.1:18104","token_env":"HOST_CALLER_TOKEN"}}}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "applicability-review-result/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract", "outcome", "outputs", "remaining", "handoff"],
+  "properties": {
+    "contract": {"const": "applicability-review-result/v1"},
+    "outcome": {"enum": ["complete", "partial", "blocked"]},
+    "outputs": {"type": "array", "maxItems": 1, "items": {"$ref": "#/$defs/output"}},
+    "remaining": {"type": "array", "maxItems": 8, "items": {"type": "string", "minLength": 1, "maxLength": 1000}},
+    "handoff": {"type": "object"}
+  },
+  "$defs": {
+    "output": {
+      "type": "object", "additionalProperties": false,
+      "required": ["action", "package_id", "decision", "target_evidence_id", "handled_refs", "basis_evidence_refs", "reason", "waiting_for"],
+      "properties": {
+        "action": {"const": "propose_applicability"},
+        "package_id": {"type": "string", "minLength": 1, "maxLength": 512},
+        "decision": {"enum": ["include", "exclude", "unresolved"]},
+        "target_evidence_id": {"type": "string", "minLength": 1, "maxLength": 512},
+        "handled_refs": {"type": "array", "maxItems": 16, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 512}},
+        "basis_evidence_refs": {"type": "array", "maxItems": 16, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 512}},
+        "reason": {"type": "string", "minLength": 1, "maxLength": 8000},
+        "waiting_for": {"type": "array", "maxItems": 8, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 1000}}
+      }
+    }
+  }
+}

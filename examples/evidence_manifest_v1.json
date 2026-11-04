@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "platform_id": "qualab-a",
+  "observed_at": "2026-08-09T14:32:18+08:00",
+  "sample_session_ref": "dualC/session-20260809-pm",
+  "content_identity": {
+    "algorithm": "sha256",
+    "digest": "3f4f6f253a6ca2786fe22cfae08ddbc8303c200cb3fd7e1517c72781704809bd",
+    "size": 25728,
+    "immutable_revision": "dataset-9865"
+  },
+  "data_profile": {
+    "shape": [201, 4],
+    "schema": ["frequency", "i", "q", "magnitude"],
+    "units": {
+      "frequency": "GHz"
+    },
+    "schema_hash": "sha256:4255305f3e9e6c15be6124931acefd60e71c0d65908a080332403c1e04ba1f13"
+  },
+  "execution": {
+    "experiment_function": "rabihigh",
+    "config_hash": "sha256:64bea5bb80e1f6b9ce13001c608e0ce255d66f2c14d298e63f47aa37365a2c70",
+    "code_commit": "abc1234",
+    "environment_ref": "qualab-env-20260809"
+  },
+  "summary": {
+    "candidate_frequency_ghz": 4.6,
+    "oscillation_visible": true
+  },
+  "preview_artifact_ids": [],
+  "mutable_source": false,
+  "adapter": {
+    "name": "qualab-manifest",
+    "version": "1.0.0"
+  }
+}

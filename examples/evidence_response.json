@@ -1,0 +1,22 @@
+{
+  "request_version": 1,
+  "lease_generation": 1,
+  "response_type": "statistics",
+  "statement": "Computed the requested bounded summary from immutable dataset-9865.",
+  "input_snapshot": {
+    "manifest_id": "manifest_example_9865_v1",
+    "immutable_revision": "dataset-9865",
+    "row_range": [0, 200],
+    "column": "magnitude"
+  },
+  "result": {
+    "point_count": 201,
+    "min": 0.114,
+    "max": 0.892,
+    "contrast": 0.778
+  },
+  "artifact_ids": [],
+  "output_hashes": {},
+  "manifest_id": "manifest_example_9865_v1",
+  "manifest_hash": "example-manifest-sha256"
+}

@@ -1,0 +1,488 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:issue-manager:project-package-contracts:v1",
+  "$defs": {
+    "projectManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "generator",
+        "generator_code_sha256",
+        "package_id",
+        "default_root",
+        "components",
+        "orchestration_status",
+        "snapshot_semantics",
+        "execution_policy",
+        "reference_diagnostic",
+        "files"
+      ],
+      "properties": {
+        "format": {
+          "const": "issue-manager-project-package/v1"
+        },
+        "generator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "generator_code_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "package_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "default_root": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "components": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "im"
+          ],
+          "properties": {
+            "im": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "format",
+                "generator",
+                "generator_code_sha256",
+                "schema_version",
+                "rule_id",
+                "roots",
+                "table_counts",
+                "schema_sha256",
+                "snapshot_at",
+                "audit_watermark",
+                "artifacts",
+                "external_reference_count",
+                "authentication",
+                "historical_backups",
+                "files"
+              ],
+              "properties": {
+                "format": {
+                  "const": "issue-manager-im-component/v1"
+                },
+                "generator": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "generator_code_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "schema_version": {
+                  "const": 10
+                },
+                "rule_id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "roots": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256
+                  }
+                },
+                "table_counts": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "schema_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "snapshot_at": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "audit_watermark": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "artifacts": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "count",
+                    "bytes"
+                  ],
+                  "properties": {
+                    "count": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "bytes": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  }
+                },
+                "external_reference_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "authentication": {
+                  "const": "disabled"
+                },
+                "historical_backups": {
+                  "const": "not_carried"
+                },
+                "files": {
+                  "type": "array",
+                  "maxItems": 100000,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "path",
+                      "size",
+                      "sha256"
+                    ],
+                    "properties": {
+                      "path": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "size": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "sha256": {
+                        "type": "string",
+                        "pattern": "^[0-9a-f]{64}$"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "orchestration": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "root",
+                "schema_version",
+                "snapshot_at",
+                "event_watermark",
+                "table_counts",
+                "schema_sha256"
+              ],
+              "properties": {
+                "root": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "schema_version": {
+                  "const": 6
+                },
+                "snapshot_at": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 256
+                },
+                "event_watermark": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "table_counts": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                },
+                "schema_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              }
+            }
+          }
+        },
+        "orchestration_status": {
+          "enum": [
+            "included",
+            "unbound",
+            "cancelled",
+            "unauthorized"
+          ]
+        },
+        "snapshot_semantics": {
+          "const": "independent-components"
+        },
+        "execution_policy": {
+          "const": "isolated-on-install"
+        },
+        "reference_diagnostic": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "size",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              },
+              "size": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "imComponentManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "format",
+        "generator",
+        "generator_code_sha256",
+        "schema_version",
+        "rule_id",
+        "roots",
+        "table_counts",
+        "schema_sha256",
+        "snapshot_at",
+        "audit_watermark",
+        "artifacts",
+        "external_reference_count",
+        "authentication",
+        "historical_backups",
+        "files"
+      ],
+      "properties": {
+        "format": {
+          "const": "issue-manager-im-component/v1"
+        },
+        "generator": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "generator_code_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "schema_version": {
+          "const": 10
+        },
+        "rule_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "roots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        },
+        "table_counts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "schema_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "snapshot_at": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "audit_watermark": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "artifacts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "count",
+            "bytes"
+          ],
+          "properties": {
+            "count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "external_reference_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "authentication": {
+          "const": "disabled"
+        },
+        "historical_backups": {
+          "const": "not_carried"
+        },
+        "files": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "size",
+              "sha256"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256
+              },
+              "size": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "exportRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "request_id",
+        "include_orchestration"
+      ],
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "include_orchestration": {
+          "type": "boolean"
+        }
+      }
+    },
+    "preflightRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "upload_id"
+      ],
+      "properties": {
+        "upload_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "installRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "upload_id",
+        "preflight_hash",
+        "name",
+        "operation_id"
+      ],
+      "properties": {
+        "upload_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "preflight_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "operation_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      }
+    },
+    "openRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "installation_id"
+      ],
+      "properties": {
+        "installation_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "componentExportRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "request_id"
+      ],
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      }
+    }
+  },
+  "description": "Binary upload/download bodies are streams, never JSON/base64; component IDs are opaque 16-hex values. Host authority is not a request field."
+}

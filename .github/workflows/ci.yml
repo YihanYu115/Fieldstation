@@ -1,0 +1,57 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assert clean checkout
+        run: test -z "$(git status --porcelain)"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - name: Prepare dependency and build source outside checkout
+        run: |
+          mkdir -p "${{ runner.temp }}/build-source"
+          git archive HEAD | tar -x -C "${{ runner.temp }}/build-source"
+      - run: python -m pip install -e "${{ runner.temp }}/build-source[dev]"
+      - run: python -m pip install -e "${{ runner.temp }}/build-source/orchestration[mcp]"
+      - run: ruff check . --cache-dir "${{ runner.temp }}/ruff"
+      - run: python -m mypy issue_manager --cache-dir "${{ runner.temp }}/mypy"
+      - run: python -m mypy orchestration/src/workflow_orchestrator --cache-dir "${{ runner.temp }}/mypy"
+      - run: python scripts/check_core_generality.py
+      - run: python scripts/check_workflow_boundary.py
+      - run: python scripts/check_documentation.py
+      - run: python scripts/check_context_algebra.py
+      - name: Test current kernel behavior
+        run: python -m pytest -p no:cacheprovider --basetemp "${{ runner.temp }}/pytest"
+      - name: Build outside the checkout
+        run: |
+          python -m build "${{ runner.temp }}/build-source" --outdir "${{ runner.temp }}/dist"
+          python -m build --wheel "${{ runner.temp }}/build-source/orchestration" --outdir "${{ runner.temp }}/orchestration-dist"
+      - name: Isolated wheel smoke
+        run: python scripts/check_wheel_smoke.py "${{ runner.temp }}"/dist/*.whl --expected-version 0.9.0rc11 --expected-schema-version 10 --receipt-out "${{ runner.temp }}/wheel-smoke-${{ matrix.python-version }}.json"
+      - name: Isolated orchestration HTTP boundary
+        run: python scripts/check_orchestrator_install.py "${{ runner.temp }}"/orchestration-dist/*.whl --receipt-out "${{ runner.temp }}/orchestration-smoke-${{ matrix.python-version }}.json"
+      - run: git diff --check
+      - name: Assert tests did not dirty the checkout
+        run: test -z "$(git status --porcelain)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: issue-manager-${{ matrix.python-version }}-evidence
+          path: |
+            ${{ runner.temp }}/wheel-smoke-${{ matrix.python-version }}.json
+            ${{ runner.temp }}/orchestration-smoke-${{ matrix.python-version }}.json
+            ${{ runner.temp }}/dist/*
+            ${{ runner.temp }}/orchestration-dist/*

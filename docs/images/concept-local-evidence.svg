@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 850" role="img" aria-labelledby="title desc">
+<title id="title">局部添加证据，自动计算影响：漫画构图草图</title>
+<desc id="desc">在证据资料室，研究者在板上添加新的反驳证据及其关系。机械臂计算并标示关联证据状态变化，右侧结论卡片提醒重新检查。未受影响的材料保留。</desc>
+<defs>
+<marker id="redArrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#bc614c"/></marker>
+<marker id="greenArrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#529884"/></marker>
+</defs>
+<rect width="1500" height="850" fill="#f9f7ef"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#2f4540">
+<text x="55" y="55" font-size="29" font-weight="700">构图草图：添加局部证据，自动维护影响</text>
+<text x="55" y="88" font-size="17" fill="#6e8179">一个连续场景 · 墙面是视觉中心 · 箭头和文字仅用于草图讨论</text>
+<!-- room wall and board -->
+<rect x="35" y="120" width="1430" height="620" rx="20" fill="#f3e8d3" stroke="#d3c4aa" stroke-width="3"/>
+<rect x="225" y="158" width="1120" height="480" rx="14" fill="#fffdf7" stroke="#9c8063" stroke-width="12"/>
+<text x="258" y="199" font-size="22" font-weight="700">EVIDENCE ARCHIVE</text>
+<!-- board left A and B -->
+<rect x="472" y="288" width="220" height="124" rx="10" fill="#ecefea" stroke="#aebbb4" stroke-width="3"/>
+<text x="489" y="320" font-size="19" font-weight="700">A · 原实验观察</text><text x="489" y="352" font-size="16">原先可用 → 不可用</text><text x="489" y="382" font-size="14" fill="#71827a">被有效反驳</text>
+<rect x="746" y="288" width="220" height="124" rx="10" fill="#ecefea" stroke="#aebbb4" stroke-width="3"/>
+<text x="763" y="320" font-size="19" font-weight="700">B · 后续分析</text><text x="763" y="352" font-size="16">原先可用 → 不可用</text><text x="763" y="382" font-size="14" fill="#71827a">必要前提 A 不可用</text>
+<path d="M743 350 H700" stroke="#529884" stroke-width="4" marker-end="url(#greenArrow)"/><text x="703" y="335" font-size="14">依赖</text>
+<!-- node C -->
+<rect x="478" y="469" width="210" height="113" rx="10" fill="#dff2e6" stroke="#529884" stroke-width="4"/>
+<text x="494" y="504" font-size="19" font-weight="700">C · 新的反驳</text><text x="494" y="532" font-size="16">参与者新增</text>
+<path d="M580 464 L580 420" stroke="#bc614c" stroke-width="5" marker-end="url(#redArrow)"/>
+<text x="595" y="447" font-size="16" fill="#aa5947">反驳 A</text>
+<!-- unaffected -->
+<rect x="1015" y="220" width="235" height="65" rx="9" fill="#eef2e6" stroke="#9ab69d" stroke-width="2"/>
+<text x="1033" y="260" font-size="16">其他无关材料：保持原状</text>
+<!-- conclusion -->
+<rect x="1015" y="333" width="235" height="142" rx="10" fill="#fcf1d4" stroke="#d1a75e" stroke-width="3"/>
+<text x="1034" y="369" font-size="19" font-weight="700">结论 · 需重新检查</text><text x="1034" y="404" font-size="15">采用的依据发生变化</text><text x="1034" y="433" font-size="14" fill="#8e7046">不是自动宣告结论为假</text>
+<path d="M972 352 H1007" stroke="#c39a55" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#greenArrow)"/><text x="972" y="335" font-size="13" fill="#8e7046">采用 B</text>
+<!-- arm -->
+<circle cx="315" cy="225" r="30" fill="#b5894c" stroke="#715638" stroke-width="6"/>
+<path d="M315 225 L375 272 L430 340" fill="none" stroke="#8c683c" stroke-width="19" stroke-linecap="round"/>
+<path d="M315 225 L375 272 L430 340" fill="none" stroke="#e1b86c" stroke-width="7" stroke-linecap="round"/>
+<circle cx="375" cy="272" r="12" fill="#f0d59b" stroke="#715638" stroke-width="4"/>
+<circle cx="430" cy="340" r="11" fill="#f0d59b" stroke="#715638" stroke-width="4"/>
+<path d="M430 340 L449 360" stroke="#715638" stroke-width="8"/><text x="270" y="258" font-size="15" fill="#785b35">规则计算</text>
+<!-- researcher foreground -->
+<circle cx="205" cy="530" r="37" fill="#edccb1" stroke="#6f8278" stroke-width="3"/>
+<path d="M168 523 Q175 486 202 488 Q239 487 242 523" fill="#687971"/>
+<path d="M154 640 Q160 571 205 570 Q249 570 255 640Z" fill="#bdd2c4" stroke="#6f8278" stroke-width="3"/>
+<path d="M242 595 Q300 568 352 531" fill="none" stroke="#6f8278" stroke-width="11" stroke-linecap="round"/>
+<path d="M350 531 L458 525" fill="none" stroke="#bc614c" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#redArrow)"/>
+<text x="76" y="680" font-size="19" font-weight="700">参与者：新增节点 + 关系</text>
+<!-- bottom floor caption -->
+<text x="405" y="696" font-size="19" font-weight="700">机械臂：计算相关证据资格，并维护受影响结论的当前性</text>
+</g>
+</svg>

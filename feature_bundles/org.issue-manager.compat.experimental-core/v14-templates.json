@@ -1,0 +1,50 @@
+{
+  "registrations": [
+    {
+      "kind": "evidence_intake_template",
+      "name": "generic-experiment-evidence",
+      "version": "1.2.0",
+      "api_version": "evidence-intake-template/v1",
+      "definition": {
+        "question_kinds": ["experiment", "analysis", "data_gap", "conflict", "verification", "decision"],
+        "required_fields": ["/kind", "/locator", "/issue_id", "/description", "/addresses_question_ids"],
+        "optional_fields": ["/target_scope", "/quality_status", "/content_hash", "/related_evidence"],
+        "artifact_requirements": {"content_addressed_when_uploaded": true},
+        "locator_requirements": {"exact_identity": true},
+        "manifest_requirements": {"required_for_platform_sources": true},
+        "analysis_summary_requirements": {"description_is_required": true},
+        "allowed_relation_types": ["depends_on", "derived_from", "reproduces", "supports", "challenges", "amends", "duplicates", "context_for"],
+        "default_evidence_role": "support",
+        "quality_requirements": {"default": "unknown"},
+        "proof_requirements": {"manager_recalculates": true},
+        "field_help": {},
+        "examples": [],
+        "clarification_questions": ["Which exact Issue and Question motivated this result?"],
+        "deprecated": false
+      }
+    },
+    {
+      "kind": "question_template",
+      "name": "generic-experiment-questions",
+      "version": "1.2.0",
+      "api_version": "question-template/v1",
+      "definition": {
+        "questions": [{"question_key": "primary-result", "prompt": "What result would resolve the current knowledge gap?", "motivation": "Tie work to an explicit question.", "question_kind": "experiment", "priority": 80, "expected_evidence": [], "required": true, "output_fields": []}],
+        "deprecated": false
+      }
+    },
+    {
+      "kind": "conclusion_summary_template",
+      "name": "generic-issue-summary",
+      "version": "1.2.0",
+      "api_version": "conclusion-summary-template/v1",
+      "definition": {
+        "sections": ["answer", "basis", "limitations", "open_questions"],
+        "field_labels": {},
+        "question_mappings": {},
+        "limitation_display": {"show_stale_answers": true, "show_optional_provider_gaps": true},
+        "deprecated": false
+      }
+    }
+  ]
+}

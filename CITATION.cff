@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use or discuss Fieldstation, please cite this project."
+authors:
+  - family-names: Yu
+    given-names: Yi-Han
+title: "Fieldstation: Infrastructure for human–AI collaboration in scientific research"
+type: software
+url: "https://github.com/YihanYu115/Fieldstation"

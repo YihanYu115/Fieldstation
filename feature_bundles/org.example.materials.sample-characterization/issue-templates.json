@@ -1,0 +1,13 @@
+{
+  "kind": "issue_template",
+  "name": "materials-sample-project",
+  "api_version": "issue-template/v1",
+  "definition": {
+    "parent_relation": {"relation_type": "rolls_up_from", "impact_policy": "hard"},
+    "parameters": {"sample_id": {"type": "string", "required": true}},
+    "nodes": [
+      {"id": "{sample_id}", "issue_type": "material-sample", "title": "Material {sample_id}", "scope": {"sample": "{sample_id}"}, "topic": "material"},
+      {"id": "{sample_id}-characterization", "issue_type": "characterization", "title": "{sample_id} characterization", "parent": "{sample_id}", "scope": {"sample": "{sample_id}"}, "topic": "characterization"}
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" compressed="false">
+  <diagram id="07_im_calculations" name="两种计算怎样协作">
+    <mxGraphModel dx="1600" dy="940" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1600" pageHeight="940" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="first" value="第一种计算  现在有哪些证据可以作为依据" style="rounded=1;arcSize=5;fillColor=#FFFFFF;strokeColor=#2563EB;dashed=1;dashPattern=7 6;align=left;verticalAlign=top;spacingLeft=24;spacingTop=15;fontSize=23;fontStyle=1;fontColor=#2563EB;fontFamily=Microsoft YaHei;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1520" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="second" value="第二种计算  原结论是否需要更新" style="rounded=1;arcSize=5;fillColor=#FFFFFF;strokeColor=#2563EB;dashed=1;dashPattern=7 6;align=left;verticalAlign=top;spacingLeft=24;spacingTop=15;fontSize=23;fontStyle=1;fontColor=#2563EB;fontFamily=Microsoft YaHei;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="1520" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=1.00000;exitY=0.49565;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.49565;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="stored" target="read">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=1.00000;exitY=0.49565;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.49565;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="read" target="judge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=0.50000;exitY=1.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.50000;entryY=0.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="judge" target="present">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=0.50000;exitY=1.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.50000;entryY=0.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="present" target="compare">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1310" y="570" />
+              <mxPoint x="860" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="past" target="compare">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=none;rounded=0;strokeColor=#2563EB;strokeWidth=2.2;endArrow=block;endFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="compare" target="result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stored" value="&lt;b style=&quot;font-size:25px&quot;&gt;保存的证据和关系&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;含内容与准确版本&lt;/span&gt;" style="shape=cylinder3;size=13;boundedLbl=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="135" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="read" value="&lt;b style=&quot;font-size:25px&quot;&gt;4  取出并整理输入&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;核对证据版本与关系指向&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="135" width="400" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="judge" value="&lt;b style=&quot;font-size:25px&quot;&gt;5  按管理规则计算&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;依赖什么 · 被什么有效反驳&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="135" width="400" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="present" value="&lt;b style=&quot;font-size:25px&quot;&gt;当前依据的计算结果&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;可用 / 不可用 / 未决 · 缺口&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="340" width="400" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="past" value="&lt;b style=&quot;font-size:25px&quot;&gt;结论当时采用的材料&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;保存的内容、版本和采用关系&lt;/span&gt;" style="shape=cylinder3;size=13;boundedLbl=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#64748B;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="compare" value="&lt;b style=&quot;font-size:25px&quot;&gt;6  对照当时与现在&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;检查依据是否匹配&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;找出需要更新的结论&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="650" y="660" width="420" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="result" value="&lt;b style=&quot;font-size:25px&quot;&gt;检查结果&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;仍匹配 / 需要更新&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;输入不完整则说明原因&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:21px;color:#475569&quot;&gt;记录受影响的结论&lt;/span&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Microsoft YaHei;fontSize=21;fontColor=#172033;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="640" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="label0" value="相关记录" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="421.0" y="148.0" width="98.0" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="label1" value="证据及其关系" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="956.0" y="148.0" width="138.0" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="计算结果" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1261.0" y="278.0" width="98.0" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="label3" value="现在同一批依据的状态" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="961.0" y="553.0" width="218.0" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="label4" value="当时的依据" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="506.0" y="678.0" width="118.0" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="label5" value="比较后" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;fontSize=20;fontColor=#2563EB;fontFamily=Microsoft YaHei;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1106.0" y="678.0" width="78.0" height="34" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,22 @@
+{
+  "kind": "report_template",
+  "name": "material-property-summary",
+  "api_version": "report-template/v2",
+  "definition": {
+    "title": "Material property summary",
+    "record_templates": ["org.example.materials/record_template/material-basic-properties@1.0.0"],
+    "columns": [
+      {"field_path": "material_class", "title": "Class", "missing_policy": "error"},
+      {"field_path": "density", "title": "Density", "unit": "kg/m3", "round": 3, "missing_policy": "mark"},
+      {"field_path": "hardness", "title": "Hardness", "unit": "HV", "round": 2, "missing_policy": "mark"}
+    ],
+    "sort": ["issue_id"],
+    "eligibility": {"minimum_verification_level": "declared"},
+    "field_policies": {"missing": "mark", "stale": "mark", "disputed": "exclude", "invalid": "block"},
+    "query": {
+      "allowed_fields": ["issue_id", "record_instance_id", "material_class", "density", "hardness"],
+      "allowed_operators": ["eq", "ne", "in", "exists", "lt", "lte", "gt", "gte"]
+    },
+    "output_format": "csv"
+  }
+}

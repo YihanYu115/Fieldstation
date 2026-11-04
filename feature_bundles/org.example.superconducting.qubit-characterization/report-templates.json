@@ -1,0 +1,23 @@
+{
+  "kind": "report_template",
+  "name": "qubit-parameter-summary",
+  "api_version": "report-template/v2",
+  "definition": {
+    "title": "Qubit parameter summary",
+    "record_templates": ["org.example.superconducting/record_template/qubit-basic-parameters@1.0.0"],
+    "columns": [
+      {"field_path": "f01", "title": "f01", "unit": "GHz", "round": 6, "missing_policy": "mark"},
+      {"field_path": "T1", "title": "T1", "unit": "us", "round": 3, "missing_policy": "mark"},
+      {"field_path": "T2_ramsey", "title": "T2 Ramsey", "unit": "us", "round": 3, "missing_policy": "mark"},
+      {"field_path": "readout_frequency", "title": "Readout", "unit": "GHz", "round": 6, "missing_policy": "mark"}
+    ],
+    "sort": ["issue_id"],
+    "eligibility": {"minimum_verification_level": "declared"},
+    "field_policies": {"missing": "mark", "stale": "mark", "disputed": "exclude", "invalid": "block"},
+    "query": {
+      "allowed_fields": ["issue_id", "record_instance_id", "f01", "T1", "T2_ramsey", "readout_frequency"],
+      "allowed_operators": ["eq", "ne", "in", "exists", "lt", "lte", "gt", "gte"]
+    },
+    "output_format": "markdown"
+  }
+}

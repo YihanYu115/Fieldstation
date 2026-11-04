@@ -1,0 +1,14 @@
+{
+  "kind": "report_template",
+  "name": "empty-renderer-smoke",
+  "api_version": "report-template/v2",
+  "definition": {
+    "title": "Registered renderer smoke",
+    "record_templates": [],
+    "columns": [],
+    "query": {"allowed_fields": [], "allowed_operators": []},
+    "field_policies": {"missing": "mark", "stale": "mark", "disputed": "exclude", "invalid": "block"},
+    "renderer_reference": "org.example.reporting/report_renderer/plain-text@1.0.0",
+    "renderer_config": {"heading": "Issue report"}
+  }
+}

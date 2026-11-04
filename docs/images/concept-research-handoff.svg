@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Fieldstation 漫画构图草图：接续研究</title>
+<desc id="desc">一位新加入的研究者在桌前阅读已有研究记录，另一位研究者指向记录。桌上的记录卡片连接研究问题、已有观察和待解决问题。画面只表现一次交接场景。</desc>
+<rect width="1200" height="630" fill="#f8f6f0"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#273b3c">
+<text x="55" y="64" font-size="27" font-weight="700">构图草图：新参与者接续一项研究</text>
+<text x="55" y="95" font-size="17" fill="#687977">单一场景 · 人物与研究记录是视觉中心 · 虚构内容</text>
+<path d="M65 118 H1135" stroke="#dedfd8" stroke-width="2"/>
+<!-- backdrop -->
+<rect x="110" y="150" width="980" height="360" rx="20" fill="#fff" stroke="#d8ddd7" stroke-width="3"/>
+<rect x="142" y="178" width="214" height="104" rx="12" fill="#edf2ee"/>
+<path d="M165 255 L212 216 L242 238 L270 207 L329 255" fill="none" stroke="#afc4bb" stroke-width="4"/>
+<!-- table -->
+<path d="M192 390 L1005 390 L1050 455 L145 455 Z" fill="#e8d9bd" stroke="#7f8277" stroke-width="3"/>
+<path d="M202 455 V508 M1000 455 V508" stroke="#7f8277" stroke-width="5"/>
+<!-- left person -->
+<circle cx="305" cy="259" r="48" fill="#f1cfaf" stroke="#556d68" stroke-width="3"/>
+<path d="M257 252 Q260 203 305 210 Q350 208 353 252 Q338 237 323 233 Q291 251 257 252Z" fill="#536862"/>
+<path d="M244 386 Q248 313 304 312 Q360 313 372 386Z" fill="#b7d0c3" stroke="#556d68" stroke-width="3"/>
+<path d="M351 339 Q393 350 432 375" fill="none" stroke="#556d68" stroke-width="13" stroke-linecap="round"/>
+<text x="225" y="538" font-size="20">已有参与者</text>
+<!-- right person -->
+<circle cx="885" cy="259" r="48" fill="#f1cfaf" stroke="#556d68" stroke-width="3"/>
+<path d="M837 252 Q839 207 882 208 Q930 207 933 252 Q904 235 884 237 Q858 238 837 252Z" fill="#6b5b4f"/>
+<path d="M817 386 Q826 313 885 312 Q942 313 951 386Z" fill="#e7bf8f" stroke="#806d5d" stroke-width="3"/>
+<path d="M834 341 Q803 358 772 380" fill="none" stroke="#806d5d" stroke-width="13" stroke-linecap="round"/>
+<text x="818" y="538" font-size="20">新参与者</text>
+<!-- central archive -->
+<rect x="410" y="185" width="380" height="200" rx="15" fill="#e5f1ea" stroke="#668b7e" stroke-width="3"/>
+<text x="600" y="220" font-size="21" font-weight="700" text-anchor="middle">已有研究记录</text>
+<rect x="435" y="243" width="330" height="35" rx="7" fill="#fff" stroke="#afc9bb"/>
+<rect x="435" y="289" width="330" height="35" rx="7" fill="#fff" stroke="#afc9bb"/>
+<rect x="435" y="335" width="330" height="35" rx="7" fill="#fff" stroke="#afc9bb"/>
+<text x="458" y="267" font-size="17">研究问题：方法 A 是否有效？</text>
+<text x="458" y="313" font-size="17">已有观察与依据</text>
+<text x="458" y="359" font-size="17">尚待复核的问题</text>
+<text x="600" y="580" text-anchor="middle" font-size="19" fill="#506964">画面主旨：新的参与者能从已有研究继续。</text>
+</g></svg>

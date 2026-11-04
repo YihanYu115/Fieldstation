@@ -1,0 +1,10 @@
+{
+  "bundle_format": "issue-manager-feature-bundle/v1",
+  "namespace": "org.issue-manager.compat",
+  "name": "experimental-core",
+  "version": "1.2.0",
+  "core_api": ">=0.8,<1.0",
+  "description": "Human-readable source marker for the built-in schema v14 compatibility bundle",
+  "registrations": ["README.json", "v14-templates.json"],
+  "dependencies": []
+}

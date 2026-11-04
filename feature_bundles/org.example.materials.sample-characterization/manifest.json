@@ -1,0 +1,10 @@
+{
+  "bundle_format": "issue-manager-feature-bundle/v1",
+  "namespace": "org.example.materials",
+  "name": "sample-characterization",
+  "version": "1.0.0",
+  "core_api": ">=0.8,<1.0",
+  "description": "Materials sample characterization reference bundle",
+  "registrations": ["issue-types.json", "issue-templates.json", "record-templates.json", "report-templates.json"],
+  "dependencies": []
+}
