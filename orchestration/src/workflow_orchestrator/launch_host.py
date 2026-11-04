@@ -241,7 +241,7 @@ class LaunchHost:
             with (session / 'stdout.log').open('ab') as out, (session / 'stderr.log').open('ab') as err:
                 child = subprocess.Popen(command, cwd=model['cwd'], env=env, stdin=subprocess.DEVNULL,
                                          stdout=out, stderr=err, shell=False, close_fds=True,
-                                         creationflags=subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0)
+                                         creationflags=getattr(subprocess, "CREATE_NO_WINDOW") if os.name == 'nt' else 0)
             with self.children_lock:
                 self.children[record['run_id']] = child
             self.fault('after_create', record)

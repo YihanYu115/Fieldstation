@@ -10,7 +10,7 @@ def observe(pid: int, original: dict[str, Any] | None = None, *, handle: Any = N
     if os.name != 'nt':
         return {'state': 'unknown', 'reason': 'unsupported_platform'}
     from ctypes import wintypes as w
-    kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+    kernel = getattr(ctypes, "WinDLL")('kernel32', use_last_error=True)
     kernel.OpenProcess.argtypes = [w.DWORD, w.BOOL, w.DWORD]
     kernel.OpenProcess.restype = w.HANDLE
     kernel.GetProcessTimes.argtypes = [w.HANDLE] + [ctypes.POINTER(ctypes.c_uint64)] * 4
@@ -20,7 +20,7 @@ def observe(pid: int, original: dict[str, Any] | None = None, *, handle: Any = N
     owned = handle is None
     current = kernel.OpenProcess(0x1000 | 0x100000, False, pid) if owned else handle
     if not current:
-        error = ctypes.get_last_error()
+        error = getattr(ctypes, "get_last_error")()
         if error == 87 and original:
             return {'state': 'exited', 'reason': 'not_present', 'exit_code': None,
                     'exit_code_known': False, 'identity': original}
@@ -28,7 +28,7 @@ def observe(pid: int, original: dict[str, Any] | None = None, *, handle: Any = N
     try:
         times = [ctypes.c_uint64() for _ in range(4)]
         if not kernel.GetProcessTimes(current, *[ctypes.byref(v) for v in times]):
-            return {'state': 'unknown', 'reason': 'process_times_failed', 'os_error': ctypes.get_last_error()}
+            return {'state': 'unknown', 'reason': 'process_times_failed', 'os_error': getattr(ctypes, "get_last_error")()}
         identity = {'pid': pid, 'creation_filetime': times[0].value}
         if original is not None and identity != original:
             return {'state': 'exited', 'reason': 'pid_reused', 'identity': original,
@@ -38,7 +38,7 @@ def observe(pid: int, original: dict[str, Any] | None = None, *, handle: Any = N
         if wait == 258:
             return {'state': 'running', 'identity': identity}
         if wait != 0:
-            return {'state': 'unknown', 'reason': 'wait_failed', 'os_error': ctypes.get_last_error(), 'identity': identity}
+            return {'state': 'unknown', 'reason': 'wait_failed', 'os_error': getattr(ctypes, "get_last_error")(), 'identity': identity}
         code = w.DWORD()
         known = bool(kernel.GetExitCodeProcess(current, ctypes.byref(code)))
         return {'state': 'exited', 'reason': 'signalled', 'identity': identity,

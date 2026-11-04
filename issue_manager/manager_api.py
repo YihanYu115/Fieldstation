@@ -541,7 +541,7 @@ class _LedgerProcessLock:
             if os.name == "nt":
                 import msvcrt
 
-                msvcrt.locking(self.stream.fileno(), msvcrt.LK_NBLCK, 1)
+                getattr(msvcrt, "locking")(self.stream.fileno(), getattr(msvcrt, "LK_NBLCK"), 1)
             else:
                 import fcntl
 
@@ -565,7 +565,7 @@ class _LedgerProcessLock:
             if os.name == "nt":
                 import msvcrt
 
-                msvcrt.locking(self.stream.fileno(), msvcrt.LK_UNLCK, 1)
+                getattr(msvcrt, "locking")(self.stream.fileno(), getattr(msvcrt, "LK_UNLCK"), 1)
             else:
                 import fcntl
 

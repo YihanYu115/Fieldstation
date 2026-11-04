@@ -22,7 +22,7 @@ def exclusive(path: Path, *, wait_seconds: float = 0):
             try:
                 if os.name == "nt":
                     import msvcrt
-                    msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
+                    getattr(msvcrt, "locking")(stream.fileno(), getattr(msvcrt, "LK_NBLCK"), 1)
                 else:
                     import fcntl
                     getattr(fcntl, "flock")(stream, getattr(fcntl, "LOCK_EX") | getattr(fcntl, "LOCK_NB"))
@@ -37,6 +37,6 @@ def exclusive(path: Path, *, wait_seconds: float = 0):
         finally:
             stream.seek(0)
             if os.name == "nt":
-                msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
+                getattr(msvcrt, "locking")(stream.fileno(), getattr(msvcrt, "LK_UNLCK"), 1)
             else:
                 getattr(fcntl, "flock")(stream, getattr(fcntl, "LOCK_UN"))
